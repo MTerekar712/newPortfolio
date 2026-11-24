@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dspBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001F3F"/>
+      <stop offset="60%" stop-color="#002b49"/>
+      <stop offset="100%" stop-color="#143e3d"/>
+    </linearGradient>
+    <linearGradient id="waveGradRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="waveGradGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A9396"/>
+      <stop offset="50%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#94D2BD"/>
+    </linearGradient>
+    <filter id="waveGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="360" fill="url(#dspBg)"/>
+
+  <!-- Radar / DSP Grid lines -->
+  <circle cx="300" cy="180" r="140" fill="none" stroke="rgba(82, 183, 136, 0.12)" stroke-width="1.5" stroke-dasharray="4,6"/>
+  <circle cx="300" cy="180" r="90" fill="none" stroke="rgba(82, 183, 136, 0.18)" stroke-width="1.5"/>
+  <circle cx="300" cy="180" r="40" fill="none" stroke="rgba(82, 183, 136, 0.25)" stroke-width="1.5"/>
+  <line x1="120" y1="180" x2="480" y2="180" stroke="rgba(82, 183, 136, 0.15)" stroke-width="1"/>
+  <line x1="300" y1="40" x2="300" y2="320" stroke="rgba(82, 183, 136, 0.15)" stroke-width="1"/>
+
+  <!-- Audio Spectrum Card -->
+  <g transform="translate(60, 45)">
+    <!-- Top badge -->
+    <rect x="0" y="0" width="165" height="26" rx="6" fill="#00182c" stroke="#52B788" stroke-width="1"/>
+    <circle cx="14" cy="13" r="4" fill="#52B788"/>
+    <text x="26" y="17" fill="#94D2BD" font-family="sans-serif" font-size="10" font-weight="bold">DEFENCE DSP ENGINE</text>
+
+    <!-- Signal comparison container -->
+    <rect x="0" y="38" width="480" height="225" rx="12" fill="rgba(0, 24, 44, 0.85)" stroke="rgba(82, 183, 136, 0.3)" stroke-width="1.5"/>
+
+    <!-- Section 1: Corrupted noisy input -->
+    <text x="20" y="65" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="600">INPUT: Voice + Ambient Interference (SNR &lt; 0dB)</text>
+    <path d="M 20 100 Q 40 70, 60 120 T 100 80 T 140 125 T 180 70 T 220 130 T 260 75 T 300 120 T 340 70 T 380 135 T 420 85 T 460 110" 
+          fill="none" stroke="url(#waveGradRed)" stroke-width="2.5" opacity="0.85"/>
+
+    <!-- Divider & DSP Filter Box -->
+    <line x1="20" y1="135" x2="460" y2="135" stroke="rgba(148, 210, 189, 0.15)"/>
+    <g transform="translate(160, 122)">
+      <rect x="0" y="0" width="160" height="24" rx="12" fill="#003566" stroke="#0A9396" stroke-width="1.5"/>
+      <text x="80" y="16" fill="#94D2BD" font-family="monospace" font-size="10" text-anchor="middle">Adaptive LMS/RLS Filter</text>
+    </g>
+
+    <!-- Section 2: Filtered Intelligible Voice -->
+    <text x="20" y="175" fill="#52B788" font-family="sans-serif" font-size="11" font-weight="600">OUTPUT: Clean Speech Acoustic Profile</text>
+    <path d="M 20 220 Q 50 185, 80 220 T 140 220 T 200 170 T 260 250 T 320 180 T 380 225 T 420 200 T 460 220" 
+          fill="none" stroke="url(#waveGradGreen)" stroke-width="3" filter="url(#waveGlow)"/>
+
+    <!-- Status tags -->
+    <g transform="translate(340, 60)">
+      <rect width="120" height="18" rx="4" fill="rgba(239, 68, 68, 0.2)"/>
+      <text x="60" y="13" fill="#fca5a5" font-family="monospace" font-size="9" text-anchor="middle">NOISY TRANSMISSION</text>
+    </g>
+    <g transform="translate(340, 170)">
+      <rect width="120" height="18" rx="4" fill="rgba(82, 183, 136, 0.2)"/>
+      <text x="60" y="13" fill="#86efac" font-family="monospace" font-size="9" text-anchor="middle">SPEECH PRESERVED</text>
+    </g>
+  </g>
+</svg>

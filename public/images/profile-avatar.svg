@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001F3F"/>
+      <stop offset="50%" stop-color="#003566"/>
+      <stop offset="100%" stop-color="#0A9396"/>
+    </linearGradient>
+    <linearGradient id="neonRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A9396"/>
+      <stop offset="50%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#94D2BD"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2cfb3"/>
+      <stop offset="100%" stop-color="#dcb08f"/>
+    </linearGradient>
+    <linearGradient id="jacketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001F3F"/>
+      <stop offset="100%" stop-color="#003566"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="400" height="400" rx="32" fill="url(#bgGrad)" />
+
+  <!-- Geometric Tech Grid Overlay -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(148, 210, 189, 0.15)" stroke-width="2" stroke-dasharray="6,6" />
+  <circle cx="200" cy="200" r="145" fill="none" stroke="url(#neonRing)" stroke-width="2.5" filter="url(#glow)" opacity="0.8" />
+  
+  <!-- Subtle Binary/Code Accents -->
+  <text x="35" y="80" fill="rgba(148,210,189,0.3)" font-family="monospace" font-size="12">&lt;dev&gt;</text>
+  <text x="310" y="80" fill="rgba(148,210,189,0.3)" font-family="monospace" font-size="12">EXTC.io</text>
+  <text x="35" y="340" fill="rgba(148,210,189,0.3)" font-family="monospace" font-size="12">{React}</text>
+  <text x="315" y="340" fill="rgba(148,210,189,0.3)" font-family="monospace" font-size="12">&lt;DSA/&gt;</text>
+
+  <!-- Developer Silhouette / Character -->
+  <!-- Shoulders & Hoodie -->
+  <path d="M 100 370 C 100 300, 150 280, 200 280 C 250 280, 300 300, 300 370 Z" fill="url(#jacketGrad)" stroke="rgba(148, 210, 189, 0.4)" stroke-width="2"/>
+  <path d="M 160 285 L 200 330 L 240 285 Z" fill="#00182c" />
+
+  <!-- Neck -->
+  <rect x="185" y="240" width="30" height="45" rx="6" fill="#dcb08f" />
+
+  <!-- Head -->
+  <ellipse cx="200" cy="195" rx="55" ry="62" fill="url(#skinGrad)" />
+
+  <!-- Hair Modern Cut -->
+  <path d="M 142 185 C 140 135, 170 120, 205 120 C 240 120, 260 135, 258 185 C 248 160, 230 150, 200 150 C 170 150, 152 165, 142 185 Z" fill="#1b212d" />
+  <path d="M 145 160 C 160 130, 220 125, 255 145 C 250 130, 230 115, 195 115 C 160 115, 145 135, 145 160 Z" fill="#2d3748" />
+
+  <!-- Sleek Tech Glasses / AR Frame -->
+  <rect x="156" y="180" width="38" height="24" rx="6" fill="rgba(10, 147, 150, 0.25)" stroke="#0A9396" stroke-width="2.5" />
+  <rect x="206" y="180" width="38" height="24" rx="6" fill="rgba(10, 147, 150, 0.25)" stroke="#0A9396" stroke-width="2.5" />
+  <line x1="194" y1="190" x2="206" y2="190" stroke="#0A9396" stroke-width="2.5" />
+  <line x1="145" y1="188" x2="156" y2="188" stroke="#0A9396" stroke-width="2" />
+  <line x1="244" y1="188" x2="255" y2="188" stroke="#0A9396" stroke-width="2" />
+
+  <!-- Friendly Expression: Nose and Smile -->
+  <path d="M 200 205 L 197 215 L 203 215" fill="none" stroke="#b88f72" stroke-width="2" stroke-linecap="round" />
+  <path d="M 188 228 Q 200 238 212 228" fill="none" stroke="#966d54" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Monogram Initials Badge in bottom corner -->
+  <g transform="translate(290, 290)">
+    <circle cx="28" cy="28" r="26" fill="#001F3F" stroke="#52B788" stroke-width="2" />
+    <text x="28" y="34" fill="#94D2BD" font-family="'Plus Jakarta Sans', sans-serif" font-weight="bold" font-size="14" text-anchor="middle">MT</text>
+  </g>
+
+  <!-- Glowing Status Pulse (Online / Open to Work) -->
+  <g transform="translate(60, 295)">
+    <rect x="0" y="0" width="105" height="28" rx="14" fill="#001F3F" stroke="#52B788" stroke-width="1.5" />
+    <circle cx="16" cy="14" r="5" fill="#52B788">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="28" y="18" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Open to Work</text>
+  </g>
+</svg>

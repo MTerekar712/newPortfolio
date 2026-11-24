@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="warrantyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001F3F"/>
+      <stop offset="60%" stop-color="#003566"/>
+      <stop offset="100%" stop-color="#0A9396"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(10, 147, 150, 0.25)"/>
+      <stop offset="100%" stop-color="rgba(0, 31, 63, 0.85)"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="360" fill="url(#warrantyBg)"/>
+  
+  <!-- Subtle decorative grid -->
+  <g stroke="rgba(148, 210, 189, 0.08)" stroke-width="1">
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="360"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="360"/>
+    <line x1="500" y1="0" x2="500" y2="360"/>
+  </g>
+
+  <!-- Main UI Mockup Window -->
+  <g filter="url(#shadow)" transform="translate(60, 40)">
+    <!-- Window frame -->
+    <rect width="480" height="280" rx="14" fill="#00182c" stroke="rgba(148, 210, 189, 0.3)" stroke-width="1.5"/>
+    
+    <!-- Window header -->
+    <rect width="480" height="36" rx="14" fill="#002444"/>
+    <rect y="22" width="480" height="14" fill="#002444"/>
+    <circle cx="20" cy="18" r="4.5" fill="#ef4444"/>
+    <circle cx="36" cy="18" r="4.5" fill="#f59e0b"/>
+    <circle cx="52" cy="18" r="4.5" fill="#10b981"/>
+    <text x="240" y="22" fill="#94D2BD" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" text-anchor="middle">Warranty Shield Dashboard</text>
+
+    <!-- Sidebar -->
+    <rect x="0" y="36" width="110" height="244" fill="#001c36"/>
+    <line x1="110" y1="36" x2="110" y2="280" stroke="rgba(148, 210, 189, 0.15)"/>
+    
+    <rect x="12" y="55" width="86" height="20" rx="4" fill="rgba(10, 147, 150, 0.3)"/>
+    <text x="22" y="69" fill="#94D2BD" font-family="sans-serif" font-size="10" font-weight="bold">Overview</text>
+    <text x="22" y="100" fill="#64748b" font-family="sans-serif" font-size="10">Active Claims</text>
+    <text x="22" y="130" fill="#64748b" font-family="sans-serif" font-size="10">Expiry Alerts</text>
+    <text x="22" y="160" fill="#64748b" font-family="sans-serif" font-size="10">Settings</text>
+
+    <!-- Stat widgets -->
+    <g transform="translate(130, 52)">
+      <rect width="100" height="60" rx="8" fill="url(#cardGrad)" stroke="rgba(10, 147, 150, 0.4)"/>
+      <text x="12" y="22" fill="#94D2BD" font-family="sans-serif" font-size="9">Total Products</text>
+      <text x="12" y="46" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="bold">142</text>
+    </g>
+    <g transform="translate(242, 52)">
+      <rect width="100" height="60" rx="8" fill="url(#cardGrad)" stroke="rgba(82, 183, 136, 0.4)"/>
+      <text x="12" y="22" fill="#52B788" font-family="sans-serif" font-size="9">Active Warranties</text>
+      <text x="12" y="46" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="bold">128</text>
+    </g>
+    <g transform="translate(354, 52)">
+      <rect width="105" height="60" rx="8" fill="url(#cardGrad)" stroke="rgba(218, 192, 155, 0.4)"/>
+      <text x="12" y="22" fill="#DAC09B" font-family="sans-serif" font-size="9">Expiring Soon</text>
+      <text x="12" y="46" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="bold">14</text>
+    </g>
+
+    <!-- Warranty list / table preview -->
+    <g transform="translate(130, 128)">
+      <rect width="330" height="130" rx="8" fill="#00182c" stroke="rgba(148, 210, 189, 0.15)"/>
+      
+      <!-- Row 1 -->
+      <circle cx="20" cy="25" r="7" fill="#0A9396"/>
+      <text x="36" y="28" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">MacBook Pro M2 - 3 Yr AppleCare</text>
+      <rect x="250" y="16" width="65" height="18" rx="4" fill="rgba(82, 183, 136, 0.2)"/>
+      <text x="282" y="29" fill="#52B788" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">PROTECTED</text>
+      
+      <line x1="10" y1="45" x2="320" y2="45" stroke="rgba(148, 210, 189, 0.1)"/>
+
+      <!-- Row 2 -->
+      <circle cx="20" cy="65" r="7" fill="#52B788"/>
+      <text x="36" y="68" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Sony WH-1000XM5 Headphones</text>
+      <rect x="250" y="56" width="65" height="18" rx="4" fill="rgba(218, 192, 155, 0.2)"/>
+      <text x="282" y="69" fill="#DAC09B" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">28 DAYS LEFT</text>
+
+      <line x1="10" y1="85" x2="320" y2="85" stroke="rgba(148, 210, 189, 0.1)"/>
+
+      <!-- Row 3 -->
+      <circle cx="20" cy="105" r="7" fill="#0A9396"/>
+      <text x="36" y="108" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Dell UltraSharp 27" 4K Monitor</text>
+      <rect x="250" y="96" width="65" height="18" rx="4" fill="rgba(82, 183, 136, 0.2)"/>
+      <text x="282" y="109" fill="#52B788" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">PROTECTED</text>
+    </g>
+  </g>
+</svg>
